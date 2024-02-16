@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Introduction to Programming Course</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<style>
+    header {
+        background-color: #A86F2F;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    main {
+        padding: 20px 0;
+    }
+    section {
+        padding-bottom: 20px;
+    }
+    
+</style>
+</head>
+<body>
+    <form action="/about" method="POST">
+    <header>
+        <h1>About Us</h1>
+    </header>
+    {% include 'nav.html' %}
+    <main>
+        <section class="about-content">
+            <h2>Our Mission</h2>
+            <p>Capacity building, performance assessment and motivation driven tool for faculty upgradation
+                .</p>
+            <h2>Our Team</h2>
+            <ul>
+                <li>Kumuda Pise - CEO</li>
+                <li>Vivek Parihar - Lead Instructor</li>
+            </ul>
+        </section>
+    </main>
+
+</form>
+</body>
+</html>

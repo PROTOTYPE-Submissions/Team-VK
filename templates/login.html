@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <title>Learning Management System</title>
+    <style>
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        nav ul {
+            list-style: none;
+            background-color: #333;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        header {
+            background-color: #A86F2F;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <h2>Login To Engineering Hub</h2>
+    </header>
+    {% include 'nav.html' %}
+
+   <form action="/login" method="POST">
+    <div class='container' align='center'>
+        
+    <div class="mb-3">
+      <input type="text" class="form-control" name="us" id="us" placeholder="UserName">
+    </div>
+    <div class="mb-3">
+        <input type="text" class="form-control" name="pass" id="pass" placeholder="Password">
+      </div>
+    <button class="btn btn-primary" type="submit">Login</button>
+  </form>
+  </div>
+</body>
+</html>

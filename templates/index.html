@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <title>Learning Management System</title>
+    <style>
+        header, nav, main, footer {
+            width: 100%;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background-color: #A86F2F;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px 0;
+        }
+        section {
+            padding-bottom: 20px;
+        }
+       
+        @media only screen and (max-width: 768px) {
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+        
+        @media only screen and (max-width: 480px) {
+            .container {
+                padding: 0 10px;
+            }
+        }     
+        .button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .button:hover {
+            background-color: #1E90FF;
+        }   
+        .logo-overlay {
+            position: absolute; /* Set the logo to an absolute position */
+            top: -130px; /* Adjust as needed */
+            left: -100px; /* Adjust as needed */
+            width: 400px; /* Adjust as needed */
+            height: auto; /* Maintain aspect ratio */
+        }
+    </style>
+</head>
+<body>
+    <form action="/courses" method="POST">
+    <header>
+        <img src="{{ url_for('static', filename='eng.png') }}" alt="Logo" class="logo-overlay">
+        <h1>Engineering Hub</h1>
+    </header>
+{% include 'nav.html' %}
+    <main>
+        <section>
+            <h2>Welcome to the Learning Management System!</h2>
+            <p>This is a platform where you can access courses, track your progress, and customize your learning experience.</p>
+        </section>
+        <section>
+            <h2>Featured Courses</h2>
+            <div class="course">
+                <h3>Introduction to Programming</h3>
+                <p>An introductory course to programming concepts and languages.</p>
+               <button class="button" href="/courses">Enroll</button>
+            </div>
+            <div class="course">
+                <h3>Data Science Fundamentals</h3>
+                <p>Learn the basics of data science, including data analysis and visualization techniques.</p>
+                <button class="button" href="/courses">Enroll</button>
+            </div>
+        </section>
+    </main>
+
+   
+</form>
+</body>
+</html>
